@@ -5,12 +5,14 @@
 * {
   margin: 0;
   padding: 0;
+  
   box-sizing: border-box;
   font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent; /*for removing the blue color layer when clicked on mobile devices*/
     word-break: break-word;
 }
+
 header {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: -webkit-sticky;
@@ -56,16 +58,17 @@ padding-left: 40px;
 }
 .menu-btn,
 .close-btn {
-  background: transparent;
+  
+  background-color: rgb(40, 121, 243);
   border: none;
   height: 40px;
   width: 40px;
-  border-radius: 50%;
   position: absolute;
   left: 11px;
   top: 8px;
   display: none;
   cursor: pointer;
+  
 }
 .menu-btn {
   left: 3px;
@@ -89,8 +92,6 @@ padding-left: 40px;
     max-height: 120%;
 }
 
-
-
 .container {
     position: relative;
     margin-top: 50px;
@@ -101,10 +102,10 @@ padding-left: 40px;
   .overlay {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 5px;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0);
+    background: rgba(255, 255, 255, 0);
     
   }
   
@@ -162,10 +163,42 @@ padding-left: 40px;
     opacity: 1;
   }
   
+.service h3{
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  margin-top: -10%;
+  color: white;
+  border: #2f73aa;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+
 @media (max-width: 1140px) {
+
   .header .menu .drawer {
     padding: 0;
+    
   }
+
+  .container img{
+    width: 250px;
+    height: 450px;
+    left: -10%;
+    top: -35%;
+    
+  }
+
+  .title{
+    right: 180px;
+    font-size: 25px;
+  }
+
+  .button{
+    left: -35%;
+  }
+
 }
 @media (max-width: 920px) {
   .header .menu {
@@ -176,29 +209,34 @@ padding-left: 40px;
     width: 100%;
     height: 100%;
     z-index: 300;
+    
   }
   .header .menu .blank {
-    height: 100%;
+    height: 200%;
     flex: 1;
+    
   }
   .header .menu .drawer {
     box-shadow: 2px 0 12px rgb(0 0 0 / 40%);
     padding-top: 50px;
     height: 100%;
     width: 225px;
-    background: #fff;
+    background: #ffffff;
     flex-direction: column;
     position: fixed;
     left: -240px;
     transition: all 200ms linear;
     overflow: auto;
+    color: white;
   }
   .header .menu .drawer a {
     padding: 20px;
+    color:#040811;
   }
   .menu-btn,
   .close-btn {
     display: block;
+    
   }
   .header .logo {
     margin-left: 17px;
