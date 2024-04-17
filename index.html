@@ -2,74 +2,166 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>Julian Gonzalez | Personal Trainer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
 </head>
 <body>
-    <header>
-        <div class="header">
-          <button class="menu-btn" aria-label="Open Menu">
-            <svg
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              
-              aria-label="Open Menu"
-              role="img"
-            >
-              <path d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-            </svg>
-          </button>
-          <div class="logo"><img src="images/JF.png" alt="" style="width: 60px"></div>
-          <nav class="menu">
-            <div class="drawer">
-              <button class="close-btn" aria-label="Close Menu">
-                <svg
-                  height="24"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  
-                  aria-label="Close Menu"
-                  role="img"
-                >
-                  <path d="M0 0h24v24H0z" fill="none"></path>
-                  <path
-                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                  ></path>
-                </svg>
-              </button>
-              <a href="#">Inicio</a>
-              <a href="#SobreMi">Sobre mi</a>
-              <a href="#Planes">Planes</a>
-              <a href="#CambiosFisicos">Cambios fisicos</a>
-              <a href="#Q&A">Q&A</a>
-              <a href="#Contacto">Contacto</a>
-            </div>
-            <div class="blank"></div>
-          </nav>
+      <header>
+        <div class="back">
+          <div class="menu container">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+              <img src="images/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+              <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre mi</a></li>
+                <li><a href="#">Planes</a></li>
+                <li><a href="#">Q&A</a></li>
+                <li><a href="#">Contacto</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
+       
       </header>
 
       <section class="sobre-mi" id="SobreMi">
 
-        <div class="container">
+        <div class="container" >
             <img src="images/juli.jpg" alt="" />
-            <p class="title">Julian Gonzalez</p>
-            <div class="overlay"></div>
-            <div class="button"><a href="https://www.instagram.com/juulifit/" target="_blank"> Instagram </a></div>
           </div>
 
             
-            <div class="service">
-              <h3>Ganancia de masa muscular</h3>
-              <h3>Perdida de grasa</h3>
-              <h3>Rutina 100% personalizada</h3>
-              <h3>Seguimiento online 24/7 via WhatsApp</h3>
+            <div class="buttons">
+              <button class="btn-hover color-9">Ganancia de masa muscular</button>
+              <button class="btn-hover color-9">Perdida de grasa</button>
+              <button class="btn-hover color-9">Rutina 100% personalizada</button>
+              <button class="btn-hover color-9">Seguimiento online 24/7 via WhatsApp</button>
             </div>
-          
-          
+
+      </section>
+      <section class="planes" id="Planes">
+
+        <div class="frame">
+          <div class="containerr">
+            <div class="card basic shadow">
+              <div class="title">
+                <p>ONLINE</p>
+              </div>
+              <div class="description">
+                <div class="price">12.000$</div>
+                <div class="month">Por mes</div>
+                <div class="text">
+                  <div class="line" style="width: 50%;"></div>
+                  <div class="line" style="width: 40%;"></div>
+                  <div class="line" style="width: 70%;"></div>
+                  <div class="line" style="width: 30%;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card pro shadow">
+              <div class="title">
+                <p>PRESENCIALES</p>
+              </div>
+              <div class="description">
+                <div class="price">20.000</div>
+                <div class="month">Por mes</div>
+              <div class="line" style="width: 50%;"></div>
+                  <div class="line" style="width: 60%;"></div>
+                  <div class="line" style="width: 70%;"></div>
+                  <div class="line" style="width: 30%;"></div>
+              </div>
+            </div>
+            
+          <div class="content shadow">
+            <div class="info users">
+              <div class="min">
+                <p>5 Users</p>
+              </div>
+              <div class="max">
+                <p>100 Users</p>
+              </div>
+              <div class="loading">
+                <div class="fill">
+                </div>
+              </div>
+            </div>
+            <div class="info space">
+              <div class="min">
+                <p>20 GB</p>
+              </div>
+              <div class="max">
+                <p>200 GB</p>
+              </div>
+              <div class="loading">
+                <div class="fill">
+                </div>
+              </div>
+            </div>
+            <div class="info projects">
+              <div class="min">
+                <p>1 Project</p>
+              </div>
+              <div class="max">
+                <p>100 Projects</p>
+              </div>
+              <div class="loading">
+                <div class="fill">
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="QYA" id="questions">
+
+        
+<div class="container-acordeon">
+  <h2>Preguntas Frecuentes</h2>
+  <div class="accordion">
+      <h5>What is Lorem Ipsum</h5>
+      <i class="fas fa-minus"></i>
+      <i class="fas fa-plus"></i>
+  </div>
+  <div class="panal">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas sit perferendis quod, ab voluptates facere repellat, debitis sapiente id minus aut placeat ipsam asperiores tempora odio modi itaque iusto sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dolorem?</p>
+  </div>
+
+  <div class="accordion">
+      <h5>Why We USe Lorem Ipsum?</h5>
+      <i class="fas fa-minus"></i>
+      <i class="fas fa-plus"></i>
+  </div>
+  <div class="panal">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas sit perferendis quod, ab voluptates facere repellat, debitis sapiente id minus aut placeat ipsam asperiores tempora odio modi itaque iusto sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dolorem?</p>
+  </div>
+
+  <div class="accordion">
+      <h5>Where it use?</h5>
+      <i class="fas fa-minus"></i>
+      <i class="fas fa-plus"></i>
+  </div>
+  <div class="panal">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas sit perferendis quod, ab voluptates facere repellat, debitis sapiente id minus aut placeat ipsam asperiores tempora odio modi itaque iusto sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dolorem?</p>
+  </div>
+
+  <div class="accordion">
+      <h5>From where can we find it?</h5>
+      <i class="fas fa-minus"></i>
+      <i class="fas fa-plus"></i>
+  </div>
+  <div class="panal">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas sit perferendis quod, ab voluptates facere repellat, debitis sapiente id minus aut placeat ipsam asperiores tempora odio modi itaque iusto sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dolorem?</p>
+  </div>
+
+  
+</div>
 
       </section>
 

@@ -1,33 +1,15 @@
-// For Making Header Responsive
-const menu_btn = document.querySelector(".menu-btn");
-const close_btn = document.querySelector(".close-btn");
-const menu = document.querySelector(".menu");
-const drawer = menu.querySelector(".drawer");
-const blank = menu.querySelector(".blank");
-const close = () => {
-  menu.classList.remove("blur");
-  drawer.classList.remove("drawer-visible");
-};
+var acordion = document.getElementsByClassName('accordion');
 
-menu_btn.addEventListener("click", (e) => {
-  menu.classList.add("blur");
-  drawer.classList.add("drawer-visible");
-});
-
-close_btn.addEventListener("click", (e) => {
-  close();
-});
-
-blank.addEventListener("click", (e) => {
-  close();
-});
-
-Array.from(drawer.querySelectorAll("a")).forEach((element) => {
-  element.addEventListener("click", () => {
-    close();
-  });
-});
-
-  
-  
-  
+var i;
+var len = acordion.length;
+for(i = 0; i<len; i++){
+    acordion[i].addEventListener('click', function(){
+        this.classList.toggle('active');
+        var panal = this.nextElementSibling;
+        if(panal.style.maxHeight){
+            panal.style.maxHeight = null;
+        }else{
+            panal.style.maxHeight = panal.scrollHeight + 'px';
+        }
+    })
+}
