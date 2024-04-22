@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Jacquarda+Bastarda+9+Charted&family=Oswald:wght@200..700&display=swap');
 
 :root {
   --accent-color: #142880;
@@ -20,6 +20,22 @@
   max-width: 100%;
 }
 
+header{
+  transition: background-color 0.3s ease;
+}
+
+header a{
+  transition: color 0.3s ease;
+}
+
+header:hover{
+  background-color: #f8f8f8;
+}
+
+header:hover a{
+  color: #333;
+}
+
 .container {
   max-width: 40%;
 }
@@ -39,6 +55,7 @@ body{
   
   
 }
+
 
 .back{
   padding: 32px 0;
@@ -86,9 +103,20 @@ body{
 }
 
 #inicio {
-  background-color: #0c152e;
-
+  position: relative;
+  height: 900px;
 }
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 #planes {
   background-color: #101b3d;
 }
@@ -110,17 +138,26 @@ body{
 
 }
 
-.container img{
-  max-width: 60%;
-  max-height: 30%;
-  margin-left: 15%;
-  margin-top: 10px;
+.capa{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(9, 17, 26);
+  opacity: 0.5;
+  z-index: -1;
 }
+
 
 .buttons{
   
-  margin-left: 50%;
-  margin-top: -25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  height: 100vh; /* Ajusta la altura según el viewport */
+  z-index: 1;
 }
 
   .buttons a {
@@ -181,6 +218,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: -1%;
 }
 
 .card {
@@ -238,74 +276,74 @@ h4{
   font-size: 200%;
 }
 
-.carousel-container {
-  
+/* slider */
+
+.slider-container {
+  width: 80%;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
-  max-height: 450px;
-  width: 40%; /* Cambia el ancho según tu preferencia */
-  margin: 0 auto; /* Centra horizontalmente */
   
 }
 
-.carousel {
+.slider {
   display: flex;
-  overflow: hidden;
-  
+  transition: transform 0.5s ease;
 }
 
-.carousel-item {
+.slide {
   flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-container img {
   max-width: 100%;
-  /*display: none; */
+  height: auto;
+  display: flex;
   
 }
 
-.carousel-item img {
-  width: 100%;
-  height: auto;
-}
-
-.carousel-container button {
+.slider-container button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: transparent;
+  background-color: #333;
+  color: #fff;
   border: none;
-  font-size: 24px;
+  padding: 10px 20px;
   cursor: pointer;
 }
 
 .prev {
-  left: 10px;
+  left: 0;
 }
 
 .next {
-  right: 10px;
+  right: 0;
 }
 
 /* Acordeón */
 
 
-.container_acordion{
+.container_acordion {
   width: 100%;
-  height: 100vh;
-  
   color: white;
   display: flex;
+  justify-content: center; /* Centra horizontalmente */
   align-items: center;
   flex-direction: column;
 }
 
-.acc_container{
+.acc_container {
   width: 100%;
-  max-width: 600px;
+  max-width: 80%; /* Ajusta el ancho máximo según sea necesario */
   padding: 10px;
   margin: 10px;
-
 }
 
-.acc_box{
+.acc_box {
   width: 100%;
   background-color: #0c152e;
   padding: 20px;
@@ -313,48 +351,68 @@ h4{
   border-radius: 8px;
 }
 
-.acc_heading{
+.acc_heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-
 }
 
-.heading{
+.heading {
   font-size: 18px;
 }
 
-.symbol{
+.symbol {
   font-size: 20px;
 }
 
-.acc_text{
+.acc_text {
   max-height: 0;
   overflow: hidden;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
-.acc_text p{
+.acc_text p {
   font-size: 14px;
-  padding-top : 10px;
+  padding-top: 10px;
 }
 
-.acc_box.active{
+.acc_box.active {
   background-color: white;
   color: black;
 }
 
-.acc_box.active.heading{
+.acc_box.active.heading {
   font-weight: 500;
 }
 
-
-.acc_box.active.acc_text{
-  max-width: 100vh;
-  transition: all .4s ease-in-out;
-
+.acc_box.active .acc_text {
+  max-height: 1000px; /* Ajusta la altura máxima según sea necesario */
 }
+
+
+h4 {
+  font-size: 3em;
+  color: white;
+  text-transform: uppercase;
+  display:flex;
+  justify-content:center;
+  font-family: "Oswald", sans-serif;
+}
+
+span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
 
 
 
@@ -362,9 +420,11 @@ h4{
 @media(max-width:900px){
   
 
-  .container_acordion{
-    width: 90%;
+  h4{
+    font-size: 37px;
   }
+
+  
   .carousel-container{
     width: 90%;
     height: 1000px;
@@ -394,16 +454,21 @@ h4{
  
 }
 
+#hero{
+  min-height: 100vh;
+  position: relative;
+
+}
+
+
+
 .menu label{
   display: block;
   position: absolute;
   margin-top: -10%;
 }
 
-.back{
-  padding: 50px 0;
-  
-}
+
 
 .menu .navbar {
   position: absolute;
@@ -432,5 +497,11 @@ h4{
   }
   #planes{
     height: 100%;
+  }
+}
+
+@media (max-width:500px){
+  .container_acordion{
+    margin-left: -4%;
   }
 }
