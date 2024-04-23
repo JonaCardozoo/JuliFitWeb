@@ -114,10 +114,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     "inicio":["Julian Gonzalez","Personal Trainer"],
     "planes": ["PLANES!", "PLANS!", "PLANOS!", "PIANI!"],
     "cambiosFisicos": ["CAMBIOS FISICOS!", "PHYSICAL CHANGES!", "MUDANÇAS FÍSICAS!", "CAMBIAMENTI FISICI!"],
-    // Añade más secciones y sus respectivos textos aquí
   };
 
-  // Función para escribir un texto en la máquina de escribir
   // Se llama a sí misma hasta que se termina el texto
   function typeWriter(elemento, texto, i, fnCallback) {
     // Verificar si el texto no ha terminado aún
