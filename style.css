@@ -20,6 +20,15 @@
   max-width: 100%;
 }
 
+.section {
+  
+  margin: 0;
+  padding: 0;
+  height: 700px; /* Ajusta la altura según tu contenido */
+  background: linear-gradient(45deg, rgb(7, 18, 78), rgb(0, 174, 255));
+  z-index: -1;
+}
+
 header{
   transition: background-color 0.3s ease;
 }
@@ -36,13 +45,6 @@ header:hover a{
   color: #333;
 }
 
-.container {
-  max-width: 40%;
-}
-
-.container:hover img {
-  transform: scale(1.1); /* Cambia el valor según el nivel de zoom deseado */
-}
 
 body{
   
@@ -52,24 +54,25 @@ body{
     rgb(46, 38, 151)73%
   );
   font-family: "Bebas Neue", sans-serif;
-  
-  
-}
 
+}
 
 .back{
   padding: 32px 0;
   background-color: #0e1835; 
+  
+  z-index: 999;
 }
 
 .menu{
-  position: absolute;
+  position:fixed;
   top:0;
   right: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  
 
 }
 .menu .navbar ul li{
@@ -117,27 +120,6 @@ video {
   z-index: -1;
 }
 
-#planes {
-  background-color: #101b3d;
-}
-#QandA {
-  background-color: #2d3c6b;
-}
-#cambiosFisicos {
-  background-color: #172652;
-}
-#contacto {
-  background-color: #1a2958;
-}
-
-.section {
-  
-  margin: 0;
-  padding: 0;
-  height: 600px; /* Ajusta la altura según tu contenido */
-
-}
-
 .capa{
   position: absolute;
   top: 0;
@@ -172,7 +154,6 @@ video {
   .container:hover .buttons {
     opacity: 1;
   }
-
 
   .btn-hover {
     width: 350px;
@@ -212,7 +193,6 @@ video {
 
 
 /* Card section */
-
 
 .cards-container {
   display: flex;
@@ -274,6 +254,7 @@ video {
 
 h4{
   font-size: 200%;
+ 
 }
 
 /* slider */
@@ -309,11 +290,17 @@ h4{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #333;
+  background-color: transparent;
   color: #fff;
-  border: none;
+  border-color: #000;
+  border-style: solid;
   padding: 10px 20px;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.slider-container button:hover{
+  background-color: #1379a8;
 }
 
 .prev {
@@ -390,7 +377,6 @@ h4{
   max-height: 1000px; /* Ajusta la altura máxima según sea necesario */
 }
 
-
 h4 {
   font-size: 3em;
   color: white;
@@ -405,9 +391,227 @@ span {
   animation: caret 1s steps(1) infinite;
 }
 
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  width: 50px;
+  height: 60px;
+  right: 30px;
+  z-index: 99999;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border: #ffffff;
+  border-style: solid;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: 0.3s all;
+  
+}
+
+#myBtn:hover {
+  background-color: #030101;
+  transition: 0.3s all;
+}
+
 @keyframes caret {
   50% {
     border-color: transparent;
+  }
+}
+
+.sliderr {
+	width: 100%;
+}
+.sliderr input {
+	display: none;
+}
+.testimonials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	min-height: 350px;
+	perspective: 1000px;
+  margin-top: 4%;
+	overflow: hidden;
+
+}
+
+.testimonials .item {
+	width: 450px;
+	padding: 30px;
+	border-radius: 5px;
+	background-color: #0A0220;
+	position: absolute;
+	top: 0;
+	box-sizing: border-box;
+	text-align: center;
+	transition: transform 0.4s;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	user-select: none;
+	cursor: pointer;
+}
+.testimonials .item img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 13px solid #3B344D;
+}
+.testimonials .item p {
+	color: #ddd;
+}
+.testimonials .item h2 {
+	font-size: 14px;
+}
+.dots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.dots label {
+	height: 5px;
+	width: 5px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: #413B52;
+	margin: 7px;
+	transition-duration: 0.2s;
+}
+
+#t-1:checked ~ .dots label[for="t-1"],
+#t-2:checked ~ .dots label[for="t-2"],
+#t-3:checked ~ .dots label[for="t-3"],
+#t-4:checked ~ .dots label[for="t-4"],
+#t-5:checked ~ .dots label[for="t-5"] {
+	transform: scale(2);
+	background-color: #fff;
+}
+#t-1:checked ~ .dots label[for="t-2"],
+#t-2:checked ~ .dots label[for="t-1"],
+#t-2:checked ~ .dots label[for="t-3"],
+#t-3:checked ~ .dots label[for="t-2"],
+#t-3:checked ~ .dots label[for="t-4"],
+#t-4:checked ~ .dots label[for="t-3"],
+#t-4:checked ~ .dots label[for="t-5"],
+#t-5:checked ~ .dots label[for="t-4"] {
+	transform: scale(1.5);
+}
+#t-1:checked ~ .testimonials label[for="t-5"] {
+	transform: translate3d(1200px, 0, -360px) rotateY(-45deg);
+}
+#t-1:checked ~ .testimonials label[for="t-4"],
+#t-2:checked ~ .testimonials label[for="t-5"] {
+	transform: translate3d(900px, 0, -270px) rotateY(-35deg);
+	z-index: 1;
+}
+#t-1:checked ~ .testimonials label[for="t-3"],
+#t-2:checked ~ .testimonials label[for="t-4"],
+#t-3:checked ~ .testimonials label[for="t-5"] {
+	transform: translate3d(600px, 0, -180px) rotateY(-25deg);
+	z-index: 2;
+}
+#t-1:checked ~ .testimonials label[for="t-2"],
+#t-2:checked ~ .testimonials label[for="t-3"],
+#t-3:checked ~ .testimonials label[for="t-4"],
+#t-4:checked ~ .testimonials label[for="t-5"] {
+	transform: translate3d(300px, 0, -90px) rotateY(-15deg);
+	z-index: 3;
+}
+#t-2:checked ~ .testimonials label[for="t-1"],
+#t-3:checked ~ .testimonials label[for="t-2"],
+#t-4:checked ~ .testimonials label[for="t-3"],
+#t-5:checked ~ .testimonials label[for="t-4"] {
+	transform: translate3d(-300px, 0, -90px) rotateY(15deg);
+	z-index: 3;
+}
+#t-3:checked ~ .testimonials label[for="t-1"],
+#t-4:checked ~ .testimonials label[for="t-2"],
+#t-5:checked ~ .testimonials label[for="t-3"] {
+	transform: translate3d(-600px, 0, -180px) rotateY(25deg);
+}
+#t-5:checked ~ .testimonials label[for="t-2"],
+#t-4:checked ~ .testimonials label[for="t-1"] {
+	transform: translate3d(-900px, 0, -270px) rotateY(35deg);
+}
+#t-5:checked ~ .testimonials label[for="t-1"] {
+	transform: translate3d(-1200px, 0, -360px) rotateY(45deg);
+}
+#t-1:checked ~ .testimonials label[for="t-1"],
+#t-2:checked ~ .testimonials label[for="t-2"],
+#t-3:checked ~ .testimonials label[for="t-3"],
+#t-4:checked ~ .testimonials label[for="t-4"],
+#t-5:checked ~ .testimonials label[for="t-4"],
+#t-5:checked ~ .testimonials label[for="t-5"] {
+	z-index: 4;
+}
+
+.footer{
+  
+  background:#000;
+  padding:30px 0px;
+  font-size: 24px;
+  font-family: 'Play', sans-serif;
+  text-align:center;
+  }
+  
+  .footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:gray;
+  font-size:0.8em;
+  }
+  
+  .footer .row a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  }
+  
+  .footer .row a:hover{
+  color:#fff;
+  }
+  
+  .footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
+  
+  @media (max-width:720px){
+  .footer{
+  text-align:left;
+  padding:5%;
+  }
+  .footer .row ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  }
+  .footer .row a i{
+  margin:0% 3%;
+  }
+  }
+
+
+
+@media (min-width:1030px){
+  .buttons{
+    margin-top: -40%;
   }
 }
 
@@ -452,15 +656,11 @@ span {
 
 }
 
-
-
 .menu label{
   display: block;
   position: absolute;
   margin-top: -10%;
 }
-
-
 
 .menu .navbar {
   position: absolute;
@@ -484,6 +684,7 @@ span {
 }
 
 @media (max-width:768px){
+
   .buttons{
     margin-left: -1%;
   }

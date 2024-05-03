@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
 let slideIndex = 0;
 
 function moveSlide(n) {
@@ -31,14 +30,10 @@ function moveSlide(n) {
   document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
 }
 
-// Automatic slide movement
+
 setInterval(() => {
   moveSlide(1);
-}, 5000); // Change slide every 5 seconds
-
-
-
-
+}, 5000); 
 /* acordion */
 
 let acc_boxes = document.querySelectorAll(".acc_box");
@@ -135,21 +130,19 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }
   }
 
-  // Iniciar la animación de la máquina de escribir para un texto en el objeto dataText
   function startTextAnimation(elementos, i, texts) {
-    // Verificar si texts[i] existe
+
     if (i < texts.length) {
-      // El texto existe! Iniciar la animación de la máquina de escribir para cada elemento h4
+     
       elementos.forEach(function(elemento) {
         typeWriter(elemento, texts[i], 0, function() {
-          // Después del callback (y cuando se ha animado todo el texto), iniciar el siguiente texto
+       
           startTextAnimation(elementos, (i + 1) % texts.length, texts);
         });
       });
     }
   }
 
-  // Obtener todos los elementos h4 de cada sección y empezar la animación de texto para cada sección
   var secciones = Object.keys(dataText);
   secciones.forEach(function(seccion) {
     var elementosH4 = document.querySelectorAll("#" + seccion + " h4");
@@ -157,23 +150,20 @@ document.addEventListener('DOMContentLoaded', function(event) {
   });
 });
 
-
-window.addEventListener('scroll', function() {
-  var section = document.getElementById('inicio');
-  var shadow = document.querySelector('.shadow');
-
-  if (shadow) {
-    // Calculamos la posición del section
-    var sectionBottom = section.offsetTop + section.offsetHeight;
-    var windowBottom = window.pageYOffset + window.innerHeight;
-
-    // Si la parte inferior del section está en la vista del usuario
-    if (windowBottom >= sectionBottom) {
-        shadow.classList.add('show-shadow');
-    } else {
-        shadow.classList.remove('show-shadow');
-    }
+window.addEventListener("scroll", function() {
+  var botonVolverArriba = document.getElementById("myBtn");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    botonVolverArriba.style.display = "block";
+  } else {
+    botonVolverArriba.style.display = "none";
   }
 });
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+
+
 
 
