@@ -183,3 +183,10 @@ function topFunction() {
  
 }
 
+window.embeddedChatbotConfig = {
+chatbotId: "EgeyFcACxQxW-W4DOBJcJ",
+domain: "www.chatbase.co"
+}
+
+
+

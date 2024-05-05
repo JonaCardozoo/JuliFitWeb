@@ -409,10 +409,10 @@ span {
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   width: 50px;
   height: 60px;
-  right: 30px;
+  right: 17px;
   z-index: 99999;
   border: none;
   outline: none;
@@ -505,7 +505,6 @@ span {
 	transition-duration: 0.2s;
   
 }
-
 
 #t-1:checked ~ .dots label[for="t-1"],
 #t-2:checked ~ .dots label[for="t-2"],
@@ -639,8 +638,6 @@ span {
   h4{
     font-size: 37px;
   }
-
-  
   .carousel-container{
     width: 90%;
     height: 1000px;
@@ -652,8 +649,6 @@ span {
   #planes{
     height: 800px;
   }
-  
-
   .container img{
     max-width: 110%;
     margin-left:72%;
@@ -667,13 +662,6 @@ span {
 .menu{
   padding: 35px 45px;
   right: 29px;
- 
-}
-
-#hero{
-  min-height: 100vh;
-  position: relative;
-
 }
 
 .menu label{
@@ -704,6 +692,14 @@ span {
 }
 
 @media (max-width:768px){
+
+
+  .footer .row{
+
+    font-size: 18px;
+  
+  }
+
 
   .buttons{
     margin-left: -1%;
