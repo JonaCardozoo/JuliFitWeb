@@ -66,8 +66,19 @@ acc_boxes.forEach((acc_box, index) => {
 
 document.addEventListener('DOMContentLoaded', function () {
   var links = document.querySelectorAll('header nav ul li a');
+  var link = document.querySelectorAll('footer ul li a');
 
   links.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var targetId = this.getAttribute('href').substring(1);
+      var targetSection = document.getElementById(targetId);
+      var offsetTop = targetSection.offsetTop;
+      scrollToTarget(offsetTop);
+    });
+  });
+
+  link.forEach(function (link) {
     link.addEventListener('click', function (e) {
       e.preventDefault();
       var targetId = this.getAttribute('href').substring(1);
@@ -160,10 +171,15 @@ window.addEventListener("scroll", function() {
 });
 
 function topFunction() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0; 
+
+  var scrollToTop = window.setInterval(function() {
+    var pos = window.pageYOffset;
+    if (pos > 0) {
+      window.scrollTo(0, pos - 80); // ¿puedes ajustar el valor 20 para la velocidad deseada?
+    } else {
+      window.clearInterval(scrollToTop);
+    }
+  }, 15); 
+ 
 }
-
-
-
-
+ 

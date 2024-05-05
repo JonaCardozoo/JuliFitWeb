@@ -11,6 +11,23 @@
   color: #04befe;
 }
 
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(45deg, rgb(7, 18, 78), rgb(0, 174, 255));
+  transition: all 0.3s;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, rgb(0, 255, 255), rgb(255, 255, 255));
+  border-radius: 6px; 
+  
+}
+
+
+
 *{
   margin: 0;
   padding: 0;
@@ -413,6 +430,12 @@ span {
   
 }
 
+ #descuento p {
+  font-size: 100%;
+  color: darkred;
+
+}
+
 #myBtn:hover {
   background-color: #030101;
   transition: 0.3s all;
@@ -607,14 +630,6 @@ span {
   }
   }
 
-
-
-@media (min-width:1030px){
-  .buttons{
-    margin-top: -40%;
-  }
-}
-
 @media(max-width:900px){
   h4{
     font-size: 37px;
@@ -697,4 +712,14 @@ span {
   .container_acordion{
     margin-left: -4%;
   }
+}
+
+@media (max-width:400px){
+
+  .card-content h2{
+
+    font-size: 20px;
+
+  }
+
 }
