@@ -26,8 +26,6 @@
   
 }
 
-
-
 *{
   margin: 0;
   padding: 0;
@@ -256,7 +254,7 @@ video {
   display: flex;
   justify-content: center;
   padding: 8px 16px;
-  background-color: #4CAF50;
+  background-color: #0d7097;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -265,7 +263,7 @@ video {
 }
 
 .card-content a:hover {
-  background-color: #45a049;
+  background-color: #000000;
 }
 
 
@@ -498,14 +496,16 @@ span {
 	align-items: center;
 }
 .dots label {
-	height: 5px;
-	width: 5px;
+	height: 10px;
+	width: 10px;
 	border-radius: 50%;
 	cursor: pointer;
 	background-color: #413B52;
 	margin: 7px;
 	transition-duration: 0.2s;
+  
 }
+
 
 #t-1:checked ~ .dots label[for="t-1"],
 #t-2:checked ~ .dots label[for="t-2"],
@@ -514,6 +514,8 @@ span {
 #t-5:checked ~ .dots label[for="t-5"] {
 	transform: scale(2);
 	background-color: #fff;
+  height: 10px;
+  width: 10px;
 }
 #t-1:checked ~ .dots label[for="t-2"],
 #t-2:checked ~ .dots label[for="t-1"],
@@ -524,9 +526,12 @@ span {
 #t-4:checked ~ .dots label[for="t-5"],
 #t-5:checked ~ .dots label[for="t-4"] {
 	transform: scale(1.5);
+  height: 10px;
+  width: 10px;
 }
 #t-1:checked ~ .testimonials label[for="t-5"] {
 	transform: translate3d(1200px, 0, -360px) rotateY(-45deg);
+  
 }
 #t-1:checked ~ .testimonials label[for="t-4"],
 #t-2:checked ~ .testimonials label[for="t-5"] {
