@@ -117,49 +117,61 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function(event) {
   // Objeto con los textos a escribir en la máquina de escribir para cada sección
   var dataText = {
-    "inicio":["Julian Gonzalez","Personal Trainer"],
+    "inicio": ["Julian Gonzalez", "Personal Trainer"],
     "planes": ["PLANES!", "PLANS!"],
     "cambiosFisicos": ["CAMBIOS FISICOS!", "PHYSICAL CHANGES!"],
+    "precioOnline": ["$12000 / mes", "$9usd / month"],
+    "precioPresencial": ["$20000 / mes", "$14usd / month"]
   };
 
   // Se llama a sí misma hasta que se termina el texto
   function typeWriter(elemento, texto, i, fnCallback) {
     // Verificar si el texto no ha terminado aún
     if (i < texto.length) {
-      // Agregar el siguiente carácter al elemento h4
+      // Agregar el siguiente carácter al elemento
       elemento.innerHTML = texto.substring(0, i + 1) + '<span aria-hidden="true"></span>';
 
       // Esperar un momento y llamar a esta función nuevamente para el siguiente carácter
       setTimeout(function() {
-        typeWriter(elemento, texto, i + 1, fnCallback)
+        typeWriter(elemento, texto, i + 1, fnCallback);
       }, 100);
     }
     // Texto terminado, llamar al callback si existe una función de callback
     else if (typeof fnCallback == 'function') {
       // Llamar al callback después de un tiempo de espera
-      setTimeout(fnCallback, 900);
+      setTimeout(fnCallback, 1500);
     }
   }
 
   function startTextAnimation(elementos, i, texts) {
-
     if (i < texts.length) {
-     
       elementos.forEach(function(elemento) {
         typeWriter(elemento, texts[i], 0, function() {
-       
           startTextAnimation(elementos, (i + 1) % texts.length, texts);
         });
       });
     }
   }
 
+  // Aplicar animación a h4 y p para cada sección
   var secciones = Object.keys(dataText);
   secciones.forEach(function(seccion) {
+    // Seleccionar h4 y p dentro de la sección
     var elementosH4 = document.querySelectorAll("#" + seccion + " h4");
-    startTextAnimation(elementosH4, 0, dataText[seccion]);
+    var elementosP = document.querySelectorAll("#" + seccion);
+
+    // Iniciar la animación para h4
+    if (elementosH4.length > 0) {
+      startTextAnimation(elementosH4, 0, dataText[seccion]);
+    }
+
+    // Iniciar la animación para p (precios)
+    if (elementosP.length > 0 && (seccion === 'precioOnline' || seccion === 'precioPresencial')) {
+      startTextAnimation(elementosP, 0, dataText[seccion]);
+    }
   });
 });
+
 
 window.addEventListener("scroll", function() {
   var botonVolverArriba = document.getElementById("myBtn");
@@ -187,31 +199,3 @@ window.embeddedChatbotConfig = {
 chatbotId: "EgeyFcACxQxW-W4DOBJcJ",
 domain: "www.chatbase.co"
 }
-
-
-$(document).ready(function(){
-  $(".testimonials-slider").owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      dots: true,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:2
-          },
-          1000:{
-              items:3
-          }
-      }
-  });
-});
-
-
-
-
-
