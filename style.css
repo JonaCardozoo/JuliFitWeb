@@ -576,7 +576,6 @@ h4 {
 .outerdiv
 {
 	  width: 100%;
-    
     margin-top: -290px;
     background: #EDF2F8;
     display: flex;
@@ -594,7 +593,7 @@ h4 {
 }
 .eachdiv
 {
-	padding: 1rem 2rem;
+	  padding: 1rem 2rem;
     border-radius: 0.8rem;
     box-shadow: 5px 5px 20px #6d6b6b6b;
     color: white;
@@ -928,6 +927,29 @@ h4 {
   }
   .footer{
     margin-top: 101%;
+  }
+}
+
+@media (max-width:360px){
+  .eachdiv{
+    padding: 15px;
+  }
+  #cambiosFisicos{
+    margin-top: -5%;
+  }
+
+  .card{
+    margin-left: 20px;
+  }
+
+  .buttons{
+    margin-left: -1px;
+  }
+
+  .wave{
+    margin-top: -90px;
+    max-height: 110%;
+    
   }
 }
 
