@@ -6,29 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="icon" type="image/png" href="images/JF.png" />
     <title>Julian Gonzalez | Personal Trainer</title>
 </head>
 <body>
-      <header>
-        <div class="back">
-          <div class="menu container">
+  <header>
+    <div class="back">
+        <div class="menu container">
             <input type="checkbox" id="menu"/>
             <label for="menu">
-              <img src="images/menu.png" class="menu-icono" alt="">
+                <img src="images/menu.png" class="menu-icono" alt="Icono de menú">
             </label>
             <nav class="navbar">
-              <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#planes">Planes</a></li>
-                <li><a href="#cambiosFisicos">Cambios fisicos</a></li>
-                <li><a href="#QandA">Preguntas frecuentes</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
-              </ul>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#planes">Planes</a></li>
+                    <li><a href="#cambiosFisicos">Cambios físicos</a></li>
+                    <li><a href="#QandA">Preguntas frecuentes</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                </ul>
             </nav>
-          </div>
         </div>
-      </header>
+    </div>
+</header>
       <section class="section" id="inicio">
         <h4>JULIAN GONZALEZ</h4>
         <video autoplay loop muted>
@@ -47,26 +48,48 @@
     </section>
       <section class="section" id="planes">
         <h4>PLANES!</h4>
-        <div class="cards-container">
+        <div class="container">
           <div class="card">
-            <img src="images/juli2.webp" alt="Card Image">
-            <div class="card-content">
-              <h2>ONLINE</h2>
-             
-              <p>30% OFF 12.000 $ /mes</p>
-              <a href="#">Mas info!</a>
-            </div>
+            <span class="title">
+              Online
+              <p class="pricing">$12000 <span class="pricing-time">/ mes</span></p>
+              <span class="sub-title">
+                Contiene:
+                <ul class="list">
+                  <li class="list-item"><span class="check">✓</span> Ganancia de masa muscular</li>
+                  <li class="list-item"><span class="check">✓</span> Pérdida de grasa</li>
+                  <li class="list-item"><span class="check">✓</span> Atención 24/7</li>
+                  <li class="list-item"><span class="check">✓</span> Whatsapp</li>
+                  <li class="list-item"><span class="check">✓</span> Instagram</li>
+                </ul>
+                <button class="button">
+                  <span class="text-button">Obtener plan ahora</span>
+                </button>
+              </span>
+            </span>
           </div>
           <div class="card">
-            <img src="images/juli.webp" alt="Card Image">
-            <div class="card-content">
-              <h2>PRESENCIAL</h2>
-              <p>20.000 $ /mes</p>
-              <a href="#">Mas info!</a>
-            </div>
+            <span class="title">
+              Presencial
+              <p class="pricing">$20000 <span class="pricing-time">/ mes</span></p>
+              <span class="sub-title">
+                Contiene:
+                <ul class="list">
+                  <li class="list-item"><span class="check">✓</span> Ganancia de masa muscular</li>
+                  <li class="list-item"><span class="check">✓</span> Pérdida de grasa</li>
+                  <li class="list-item"><span class="check">✓</span> Atención 24/7</li>
+                  <li class="list-item"><span class="check">✓</span> Whatsapp</li>
+                  <li class="list-item"><span class="check">✓</span> Instagram</li>
+                </ul>
+                <button class="button">
+                  <span class="text-button">Obtener plan ahora</span>
+                </button>
+              </span>
+            </span>
           </div>
         </div>
       </section>
+      <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0b689c" fill-opacity="1" d="M0,224L80,192C160,160,320,96,480,101.3C640,107,800,181,960,202.7C1120,224,1280,192,1360,176L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
       <section class="section" id="cambiosFisicos">
         <h4>CAMBIOS FISICOS!</h4>
         
@@ -75,16 +98,15 @@
             <div class="slide"><img src="images/cambioFisico1.webp" alt="Imagen 1" width="500px"></div>
             <div class="slide"><img src="images/cambioFisico2.webp" alt="Imagen 2" width="500px"></div>
             <div class="slide"><img src="images/cambioFisico3.webp" alt="Imagen 3" width="500px"></div>
-            <div class="slide"><img src="images/cambioFisico4.webp" alt="Imagen 3" width="500px"></div>
-            <div class="slide"><img src="images/cambiofisico5.webp" alt="Imagen 3" width="500px"></div>
+            <div class="slide"><img src="images/cambioFisico4.webp" alt="Imagen 4" width="500px"></div>
+            <div class="slide"><img src="images/cambiofisico5.webp" alt="Imagen 5" width="500px"></div>
             <!-- Agrega más slides según sea necesario -->
           </div>
-          <button class="prev" onclick="moveSlide(-1)">Anterior</button>
-          <button class="next" onclick="moveSlide(1)">Siguiente</button>
+          
         </div>
       </section>
 
-      <section class="section" id="QandA">
+      <section class="section" id="preguntasFrecuentes">
         <h4 style="color: aliceblue; display: flex; align-items: center; justify-content: center;">PREGUNTAS FRECUENTES</h4>
         
         <div class="container_acordion">
@@ -128,49 +150,79 @@
 
       <section class="section" id="testimonios">
         <h4 style="color: aliceblue; display: flex; align-items: center; justify-content: center;">TESTIMONIOS</h4>
-
-
-        <div class="sliderr">
-          <input type="radio" name="testimonial" id="t-1">
-          <input type="radio" name="testimonial" id="t-2">
-          <input type="radio" name="testimonial" id="t-3" checked>
-          <input type="radio" name="testimonial" id="t-4">
-          <input type="radio" name="testimonial" id="t-5">
-          <div class="testimonials">
-            <label class="item" for="t-1" style="font-size: 80%; color: white;" >
-              <img src="https://dummyimage.com/150" alt="picture">
-              <p>"Te doy las gracias por todos los días ayudarme, inspirarme y apoyarme💪🏽. Yo creo que sin tu ayuda no iba a poder lograr lo que estamos haciendo juntos. Me ayudaste y seguís ayudando a superarme e implementar hábitos buenos en mi vida con mucha facilidad. Hace tiempo no hubiese pensado que disfrutaría tanto de ir al gimnasio, tenerte a vos no solo coach si no como compañero me ayudó bastante. Simplemente gracias por todo</p>
-              <h2>Persona 1</h2>
-            </label>
-            <label class="item" for="t-2">
-              <img src="https://dummyimage.com/150" alt="picture">
-              <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
-              <h2>- Princy, Web Developer</h2>
-            </label>
-            <label class="item" for="t-3">
-              <img src="https://dummyimage.com/150" alt="picture">
-              <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
-              <h2>- Princy, Web Developer</h2>
-            </label>
-            <label class="item" for="t-4">
-              <img src="https://dummyimage.com/150" alt="picture">
-              <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
-              <h2>- Princy, Web Developer</h2>
-            </label>
-            <label class="item" for="t-5">
-              <img src="https://dummyimage.com/150" alt="picture">
-              <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
-              <h2>- Princy, Web Developer</h2>
-            </label>
-          </div>
-          <div class="dots">
-            <label for="t-1"></label>
-            <label for="t-2"></label>
-            <label for="t-3"></label>
-            <label for="t-4"></label>
-            <label for="t-5"></label>
+        <div class="outerdiv">
+          <div class="innerdiv">
+            <!-- div1 -->
+            <div class="div1 eachdiv">
+              <div class="userdetails">
+                <div class="imgbox">
+                  <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-daniel.jpg" alt="">
+                </div>
+                <div class="detbox">
+                  <p class="name">Persona 1</p>
+                  <p class="designation">Alumno de Julian Gonzalez</p>
+                </div>
+              </div>
+              <div class="review">
+                <h4>Te doy las gracias por todos los días ayudarme, inspirarme y apoyarme💪🏽. Yo creo que sin tu ayuda no iba a poder lograr lo que estamos haciendo juntos. Me ayudaste y seguís ayudando a superarme e implementar hábitos buenos en mi vida con mucha facilidad. Hace tiempo no hubiese pensado que disfrutaría tanto de ir al gimnasio, tenerte a vos no solo coach si no como compañero me ayudó bastante. Simplemente gracias por todo</h4>
+              </div>
+            </div>
+            <!-- div2 -->
+            <div class="div2 eachdiv">
+              <div class="userdetails">
+                <div class="imgbox">
+                  <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-jonathan.jpg" alt="">
+                </div>
+                <div class="detbox">
+                  <p class="name">Persona 3</p>
+                  <p class="designation">Alumno de Julian Gonzalez</p>
+                </div>
+              </div>
+              <div class="review">
+                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores corporis iste incidunt quibusdam assumend</h4>
+              </div>
+            </div>
+            <!-- div3 -->
+           
+            <!-- div4 -->
+            <div class="div4 eachdiv">
+              <div class="userdetails">
+                <div class="imgbox">
+                  <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-jeanette.jpg" alt="">
+                </div>
+                <div class="detbox">
+                  <p class="name dark">Persona 4</p>
+                  <p class="designation dark">Alumno de Julian Gonzalez</p>
+                </div>
+              </div>
+              <div class="review dark">
+                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores corporis iste incidunt quibusdam assumend</h4>
+              </div>
+            </div>
+            <!-- div5 -->
+            <div class="div5 eachdiv">
+              <div class="userdetails">
+                <div class="imgbox">
+                  <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-patrick.jpg" alt="">
+                </div>
+                <div class="detbox">
+                  <p class="name">Persona 2</p>
+                  <p class="designation">Alumno de Julian Gonzalez</p>
+                </div>
+              </div>
+              <div class="review">
+                <h4>Juli quería decirte que me siento muy bien entrenando con vos.
+                  Estoy sintiendo un cambio físico pero también mental y eso es por la manera en que me acompañas en este proceso.
+                  Honestamente gracias! Espero que podamos seguir juntos en este cambio.
+                  Mucho respeto por tu trabajo! JuliFit el mejor siempre. 👊</h4>
+              
+              </div>
+            </div>
           </div>
         </div>
+       
+        
+       
       </section>
 
       <button onclick="topFunction()" id="myBtn" title="Volver arriba">↑</button>
@@ -199,12 +251,7 @@
           <a href="https://www.linkedin.com/in/jonatan-cardozo-420571244/" target="_blank" style="color: aqua;">Jonatan Cardozo</a>
           </div>
         </div>
-
-
-
         </footer>
-
-
           </script>
           <script
           src="https://www.chatbase.co/embed.min.js"
@@ -215,8 +262,9 @@
           </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        
         <script src="app.js"></script>
-      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
       
 </body>
 </html>

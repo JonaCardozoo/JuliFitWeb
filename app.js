@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll('.buttons button');
     let delay = 0;
@@ -34,6 +33,7 @@ function moveSlide(n) {
 setInterval(() => {
   moveSlide(1);
 }, 5000); 
+
 /* acordion */
 
 let acc_boxes = document.querySelectorAll(".acc_box");
@@ -118,8 +118,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
   // Objeto con los textos a escribir en la máquina de escribir para cada sección
   var dataText = {
     "inicio":["Julian Gonzalez","Personal Trainer"],
-    "planes": ["PLANES!", "PLANS!", "PLANOS!", "PIANI!"],
-    "cambiosFisicos": ["CAMBIOS FISICOS!", "PHYSICAL CHANGES!", "MUDANÇAS FÍSICAS!", "CAMBIAMENTI FISICI!"],
+    "planes": ["PLANES!", "PLANS!"],
+    "cambiosFisicos": ["CAMBIOS FISICOS!", "PHYSICAL CHANGES!"],
   };
 
   // Se llama a sí misma hasta que se termina el texto
@@ -187,6 +187,31 @@ window.embeddedChatbotConfig = {
 chatbotId: "EgeyFcACxQxW-W4DOBJcJ",
 domain: "www.chatbase.co"
 }
+
+
+$(document).ready(function(){
+  $(".testimonials-slider").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:2
+          },
+          1000:{
+              items:3
+          }
+      }
+  });
+});
+
+
 
 
 
