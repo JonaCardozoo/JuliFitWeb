@@ -61,6 +61,18 @@
 
 }
 
+#contacto{
+  height: 400px;
+  background-image: 
+    linear-gradient(
+      80deg,
+      #0fa9d0 100%,
+      #020039da 70%
+      
+    );
+    margin-top: -58px;
+}
+
 #cambiosFisicos{
   margin: 0;
   padding: 10px;
@@ -188,6 +200,14 @@ video {
 }
 
 
+.textoTestimonio{
+  color: #000;
+  margin-left: 20%;
+  
+}
+
+
+
 .buttons{
   
   display: flex;
@@ -247,6 +267,9 @@ video {
     box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }
 
+#testimonios{
+  height: 590px;
+}
 
 /* Card section */
 
@@ -402,8 +425,9 @@ video {
 
 h4{
   font-size: 200%;
- 
+  
 }
+
 
 /* slider */
 
@@ -573,6 +597,8 @@ h4 {
   }
 }
 
+
+
 .outerdiv
 {
 	  width: 100%;
@@ -581,6 +607,7 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -1;
 }
 .innerdiv
 {
@@ -714,6 +741,105 @@ h4 {
 	text-decoration: none;
 }
 
+
+
+
+
+.contact-container {
+  background-image: radial-gradient(
+      circle at 0% 0%,
+      rgb(9, 7, 44) 15%,
+      rgba(0, 0, 0, 0) 75%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(2, 3, 31, 0.9) 15%,
+      rgba(0, 0, 0, 0) 150%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(24, 8, 28, 0) 0%,
+      rgb(48, 59, 143) 50%,
+      rgba(9, 8, 28, 0) 100%
+    );
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 49px;
+}
+
+.wave2{
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin-top: -16%;
+  z-index: 9999;
+}
+
+.contact-container h4 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.contact-container p {
+  margin-bottom: 20px;
+  font-size: 19px;
+  color: #ffffff;
+}
+
+.contact-container input[type="email"],input[type="name"] {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.contact-container input[type="email"]:focus,input[type="name"]:focus {
+  
+  border-color: #0096a4;
+  outline: none;
+}
+
+
+.contact-container .btn-enviar {
+  background-color: #0b689c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.contact-container .btn-enviar:hover {
+  background-color: #084a6e;
+  transition: all 0.3s;
+}
+
+
+
+@media only screen and (max-width: 1300px)
+{
+  .textoCambioFisico{
+    margin-top: 40px;
+  }
+  
+	.textoTestimonio{
+    margin-left: 60%;
+  }
+}
+
+
+
 @media only screen and (max-width: 1000px)
 {
 	.innerdiv
@@ -722,15 +848,32 @@ h4 {
     
 	}
 }
-@media only screen and (max-width: 800px)
+@media only screen and (max-width: 900px)
 {
+  .textoTestimonio{
+    margin-bottom: 27%;
+    margin-left: 2%;
+  }
+
+  #testimonios{
+    height: 750px;
+  }
+
 	.innerdiv
 	{
-		transform: scale(0.6);
+		display: flex; 
+		flex-direction: column;
+		transform: scale(1);
+		margin: 7rem;
+		margin-bottom: 5rem;
+	}
+
+  .div1 {
+		background-position-x: 11rem;
 	}
   
 }
-@media only screen and (max-width: 600px)
+@media only screen and (max-width: 680px)
 {
 	.div1 {
 		background-position-x: 11rem;
@@ -743,6 +886,8 @@ h4 {
 		margin: 1rem;
 		margin-bottom: 20rem;
 	}
+
+ 
 	
 }
 
@@ -822,8 +967,6 @@ h4 {
     margin-top: -2%;
     
   }
-  
-
   .card{
     margin-left: 10%;
     width: 15rem;
@@ -885,7 +1028,9 @@ h4 {
 }
 
 @media (max-width:768px){
-
+  #testimonios{
+    height: 670px;
+  }
   .footer{
     margin-top: 10%;
   }
@@ -903,7 +1048,25 @@ h4 {
   #planes{
     height: 100%;
   }
+
+  .wave2{
+    margin-top: 10px;
+  }
+
+  .contact-container{
+    margin-top: 49px
+  }
+
+  #contacto{
+    height: 400px;
+  }
+
+  .footer{
+    margin-top: -1px;
+  }
 }
+
+
 
 @media (max-width:500px){
 
@@ -919,18 +1082,28 @@ h4 {
     height: 750px;
   }
 
+ 
+
+  .contact-container{
+    width: 70%;
+    margin-top: 49px;
+  }
   
 
-  
   .acc_container{
     margin-left: -10%;
   }
-  .footer{
-    margin-top: 101%;
-  }
+  
+
+ 
 }
 
-@media (max-width:360px){
+@media (max-width:390px){
+
+ 
+  #testimonios{
+    height: 500px;
+  }
   .eachdiv{
     padding: 15px;
   }
@@ -951,5 +1124,16 @@ h4 {
     max-height: 110%;
     
   }
+
+  .wave2{
+    
+    margin-top: 40%;
+  }
+
+  .contact-container{
+    margin-top: 50px;
+  }
+
+  
 }
 
